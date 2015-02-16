@@ -67,6 +67,14 @@ a.button:hover, a.button:focus {
   margin-left:5rem;
 }
 
+nav ul ul{
+  display: none;
+  position:absolute;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
 
 
 
