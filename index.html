@@ -1,132 +1,123 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
   <head>
-
     <meta charset="utf-8">
-    <title>P01 - Part 2</title>
-
-    <link rel="stylesheet" href="css/normalize.css">
-    <!-- Here we are adding in our link to the CSS file for our page -->
-    <link rel="stylesheet" href="css/main.css">
-
+    <title>Project 02 Style Guide </title>
+    <link href="css/main.css" rel="stylesheet">
   </head>
 
 
   <body>
+    <h1>P02 Style Guide</h1>
 
-    <h1>P01 - Part 2</h1>
+    <nav>
+          Go to:
+        <ul>
+          <li><a href="#buttons">Buttons </a> </li>
+          <li><a href="#form">Form </a> </li>
+          <li><a href="#textual">Textual </a> </li>
+          <li><a href="#image">Image </a> </li>
+          <li><a href="#key grouping">Key Grouping</a> </li>
+        </ul>
 
-    <p>
-      <strong>Create a style guide</strong> that illustrates your brand direction and for sample style guides, visit the course Canvas site. <br>Your style guide must include <strong>names for, examples of</strong> and <strong>code</strong> for the following items:</br>
-      <li> button elements on your site </li>
-      <li> form elements on your site </li>
-      <li> textual elements on your site </li>
-      <li> image elements on your site </em></li>
-      <li> key groupings of elements (i.e. a navigation bar) </li>
-<p>
-      <hr>
-</p>
-    </p>
+    </nav>
 
-     <section id="buttons">
-     <h1>Button Elements</h1>
-      <nav>
+ 
+    <!-- Try to ensure that each element has its own portion of the page -->
+    <section id="buttons">
+      <h1>Button Elements</h1>
         <h3>CSS selector:</h3>
-      <p>'nav a'</p>
-      <h3>Sample code:</h3>
-      <code>&lt;a href="#" &gt;Book an appointment&lt;/a&gt;</code>
-      <h3>Rendered element:</h3>
-       <a href="#">Book an appintment</a>
-      </nav>
+            <p>'a href'</p>
+        <h3>Sample code:</h3>
+            <code>&lt;a href="#" &gt;Book an appointment&lt;/a&gt;</code>
+        <h3>Rendered element:</h3>
+             <a class="button" href="#">Book an appintment</a>
+<!--       <a class="button" href="#">Next Step</a> -->
     </section>
-     <hr>
 
 
-     <section id="form">
-     <h1>Form Elements</h1>
-     <h3>CSS selector:</h3>
-      <p>'form'</p>
-      <h3>Sample code:</h3>
-      <code>&lt;section id="comments" &gt;
+
+    <section id="form">
+      <h1>Form Elements</h1>
+           <h3>Sample code:</h3>
+         <code>&lt;section id="comments" &gt;
             <br>&lt;form method="post" action ="#"&gt;</br> 
             <br>&lt;div class="input-wrapper" &gt;</br>
             <br>&lt;textarea id="form-comment" placeholder="Please place comment here" &gt; </br><br>&lt;/textarea&gt;</br><br>&lt;/div&gt;</br>
             <br>&lt;input type="submit" value="Submit your comment" &gt;</br>
             <br>&lt;/form&gt;</br> 
           </code>
+
       <h3>Rendered element:</h3>
-         <section id="comments">
+         <div id="comments">
           <form method="post" action="#">
-          <div class="input-wrapper">
-          <textarea id="form-comment" placeholder="Please place comment here"></textarea>
-        </div>
-        <input type="submit" value="Submit your comment">
-      </form>
-    </section>
-    <hr>
-
-
-
-     <section id="texture">
-     <h1>Texture Elements</h1>
-      <h3>CSS selector:</h3>
-      <p>'booked'</p>
-      <h3>Sample code:</h3>
-      <code>&lt;div class="booked"&gt;
-        <br>&lt;h3&gt;Appointment is booked&lt;/h3&gt;</br></code>
-      <h3>Rendered element:</h3>
-
-     <div class="booked">
-      <h3>Appointment is booked!</h3>
-    </div>
+            <div class="input-wrapper">
+                 <textarea id="form-comment" placeholder="Please place comment here"></textarea>
+             </div>
+                <input type="submit" value="Submit your comment">
+          </form>
+         </div>
 
      </section>
-     <hr>
 
 
-     <section id="image">
-     <h1>Image Elements</h1>
+
+    <section id="textual" >
+      <h1>Textual Elements</h1>
         <h3>CSS selector:</h3>
-      <p>'img'</p>
-      <h3>Sample code:</h3>
-      <code>&lt;img src="img/tv.png" height ="480" width="600" alt="A tv" &lt;/a&gt;</code>
-      <h3>Rendered element:</h3>
-     <img src="img/tv.png" height="480" width="600" alt="A tv">
-     </section>
-     <hr>
+            <div class="complete">
+              <h3>Complete!</h3>   
+              <div class="contentInfo">
+                  <p>  <strong>Name:</strong> Sisi Liang </p>
+                  <p> <strong>Phone:</strong> 604-123-4567 </p>
+                  <p><strong>e-mail:</strong> person@sfu.ca</p>
+                  <p><strong>Service:</strong> Commercial Law</p>
+                  <p><strong>Time:</strong> Feb,19 @11:15-11:30</p>
+                  <p><strong>Total: </strong> $109.78 </p>
+              </div>
+
+                <p>
+                A confirmation email along with a receipt has been sent to you for future reference.
+                </p> 
+            </div>
+
+    </section>
 
 
 
-     <section id="groups">
-     <h1>Key groupings of elements</h1>
-     <body>
-      <h3>CSS selector:</h3>
-      <p>'nav a'</p>
-      <h3>Sample code:</h3>
-      <code>&lt;ul &gt;
-        <br>&lt;li &gt; &lt;a href="#"&gt; Service 
-        &lt;/a&gt;</br>
-        &lt;ul &gt;
-          <br>&lt;li &gt; &lt;a href="#"&gt; Family Law &lt;/a&gt; &lt;/li&gt;</br>
-          <br>&lt;li &gt; &lt;a href="#"&gt; Real Estate Law &lt;/a&gt; &lt;/li&gt;</br>
-          <br>&lt;/ul&gt;</br>
-          <br>&lt;/li&gt;</br>
-          <br>&lt;/ul&gt;</br>
+    <section id="image">
+      <h1>Image Elements</h1>
+          <h3>CSS selector:</h3>
+              <p>'img'</p>
+              <h3>Sample code:</h3>
+             <code>&lt;img src="img/tv.png" height ="138" width="163" alt="A logo with name" &lt;/a&gt;</code>
+          <h3>Rendered element:</h3>
+            <img src="img/tv.png" height ="138" width="163" alt="A logo with name">
+    </section>
 
 
-      </code>
-      <h3>Rendered element:</h3>
 
-      <nav>
-                <ul>
-                  <li><a href="#">Service</a>
-                    <ul>
-                  <li><a href="#">Family Law</a></li>
-                  <li><a href="#">Immigration Law</a></li>
-                  <li><a href="#">Real Estate Law</a></li>
-                </ul>
-                </li>
-                  </ul>
-                </nav>
-       </sextion>
+    <section id="key grouping">
+       <h1>Key Groupings Elements</h1>
+          <nav>
+              <ul>
+              <li>About</li>
+              <li>Service </li>
+                     <ul>
+                      <li>Commercial Law</li>
+                      <li>Family Law</li>
+                      <li>Wills & Estate Law</li>
+                      <li>Real Estate Law</li>
+                      <li>Immigration Law</li>
+                      <li>Litigation</li>
+                     </ul>
+              <li>Lawyers</li>
+              <li>Video Centre</li>
+              <li>Contact</li>
+              </ul>
+          </nav>
+    </section>
+
+
+  </body>
+</html>
