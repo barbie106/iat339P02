@@ -134,8 +134,8 @@ ul :hover ul {
 
 body{ 
 	font-family: 'Noto-Sans', sans-serif;
-	font-weight: 100;
-	background-image: url("../images/1burnaby_mountain_image.jpg");
+
+	background-image: url("../images/bg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: black;
