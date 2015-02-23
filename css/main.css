@@ -16,7 +16,6 @@ img{
 header{
 	font-family: 'Noto-Sans', sans-serif;
 	font-weight: 100;
-	background-color: rgba(0, 0, 0, 0.7);
  	/* set the length of the header box(border) */
 	width: auto;   /* when enlarging the windows, it gets to a max width of 1000px */
 	height: 100px;
