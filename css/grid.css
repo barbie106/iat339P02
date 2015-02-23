@@ -1,0 +1,77 @@
+.grid:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+[class^='col-'] {
+	float: left;
+	padding: 0;
+	text-align: center;
+}
+
+
+
+
+/* 1 column of 6 grids */
+.col-1of6{
+	width: 16.666%;
+}
+ /* once the windows is enlarged, the nav column
+ becomes 6 */
+@media( max-width: 166.666px ){
+	.col-1of6{
+		width: 100%;
+	}
+
+}
+
+
+/* nav bar */
+@media(max-width: 833px){
+	.col-1of6 {
+		width: 50%;
+	}
+	ul ul {
+		width: 47.8%;
+	}
+}
+ /* once the windows is shrinked, the nav column
+ becomes 3 and 2 rows */
+@media (max-width: 500px) {
+	.col-1of6 {
+		width: 100%;
+
+	}
+	ul ul {
+		width: 93%;
+	}
+}
+
+
+
+/* -----------------   News Page 1of3 + 2of3  ----------------*/
+
+/* for news.html, 1 column of 3 grids */
+.col-1of3{
+	width: 33.333%;
+}
+ /* once the windows is enlarged, the nav column
+ becomes 3 */
+@media(max-width:1000px){
+	.col-1of3{
+		width: 50%;
+	}
+}
+
+@media(max-width:630px){
+	.col-1of3{
+		width: 100%;
+	}
+}
