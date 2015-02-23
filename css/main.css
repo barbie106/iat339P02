@@ -217,7 +217,11 @@ a:hover {
 
 
 /*.home_booking{
-	position: 
+	position: absolute;
+	text-align: center;
+	top: 40%;
+	left:45%;
+
 }*/
 
 /*-------------------------  services page  -------------------------*/
