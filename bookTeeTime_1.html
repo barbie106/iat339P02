@@ -1,0 +1,222 @@
+<!doctype html>
+<!-- The ordering of tags is from top left to bottom right, tags that are higher in hierarchy are indented less, and tags that are lower in hierarchy are indented more (increments of 1 indent per level of hierarchy). -->
+<html lang="en">
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<title>Book a Tee Time</title>
+		<meta charset = "utf-8">
+		<link rel="stylesheet" href="css/normalize.css">
+    	<link rel="stylesheet" href="css/main.css">
+    	<link rel="stylesheet" href="css/grid.css">
+
+	</head>
+	<!-- G class structure: 16 columns, 2 columns on the left and  2 columns on the right. The  classdle 12 columns will be actual content. -->
+	<body>
+		<!-- The header tag includes the heading, search bar and the main navigation which will be included on all pages of this website. This is semantically appropriate because it will be on all the pages like a header is.-->
+<!-- =======================================  Header ===================================== -->
+		<!-- specifies a header for a burnaby mountain course-->
+		<header > 
+
+		
+				<!-- search box -->
+			<!-- defines this html -->
+			<h1><a href="home.html">GOLF BURNABY</a></h1>  
+
+		 </header>
+<!-- =====================================  navigation =================================== -->
+
+		
+		<!-- defines a set of navigation links.-->
+	<nav class="grid">	 
+		<ul>
+
+			<div class="col-1of6">
+					<!-- a link to home page -->
+					<a href= "home.html" > Home </a> 
+			</div>
+
+						<!-- a link to events page-->	
+
+			<div class="col-1of6">
+				<div>
+					<a href= "news.html"> News </a>
+				</div>
+			</div>
+
+
+				<!--a link to golf courses page -->
+			<div class="col-1of6">
+				<a href= "home.html" > Golf Courses </a> 
+						<!--list under golf courses -->
+						<ul>
+								<!-- a link to burnaby mountain page -->
+							<li> <a href="burnaby_mountain.html" > Burnaby Mountain</a>  </li> 
+								<!--a link to riverway page -->
+							<li> <a href= "riverway.html"> Riverway</a> </li> 
+						</ul>
+
+			</div>
+
+				<!-- a link to bookings page-->
+			<div class="col-1of6">
+				<a href= "home.html" id="active"> Bookings </a> 
+							<!-- list under booking menu -->
+						<ul>
+							<li> <a href="bookTeeTime_1.html"> Tee time</a> </li> 
+							<!-- a link to lessons page-->
+							<li> <a href= "home.html"> Lessons</a> </li> 
+							<!-- a link to club house page-->
+							<li> <a href= "home.html"> Club House</a>  </li> 
+							<!-- a link to rates and fees page-->
+							<li> <a href= "home.html"> Rates &amp; fees</a>  </li> 
+						</ul>
+
+			</div>
+
+							<!-- a link to lessons page -->
+			<div class="col-1of6">
+				<a href= "home.html"  > Lessons</a> 
+			</div>
+
+
+			<!-- a link to about us page-->
+			<div class="col-1of6">
+				<a href= "home.html"> About Us </a> 
+			</div>
+		</ul>
+
+	
+	</nav>
+
+
+<!-- ============================= Login =========================== -->
+
+		<!-- This article is for Booking a Tee Time and will change depending on the page -->
+		<article id="bookingMain">
+			<div class="grid">
+			<div class="col-5of12">
+				<section id="login">
+					<h2 id="loginlabel">Login</h2>
+					<!-- There will also be a login section for returning users, with an option to register underneath -->
+					<div id="logincontent">
+					<div class="col-12of12">
+						<p>
+							<div id="usernameField">
+								Username: <input type="text" id="username">
+							</div>
+						</p>
+						<p>
+							<div id="passwordField">
+								Password:&nbsp;&nbsp;<input type="text" id="password">
+							</div>
+						</p>
+						<p>
+							<div>
+								<a href="register.html">Register</a>
+								<a href="bookTeeTime_2.html" class="myButton" id="loginButton">Login</a>
+							</div>
+						</p>
+					</div>
+					</div>
+				</section>
+			</div>
+
+<!-- ============================= Book as guest =========================== -->
+
+			<div class="col-7of12">
+				<!-- Book now for those users who do not want to create an account and Phone in information for those who do not want to do this online -->
+					<section id="guest">
+						<!-- Book as a guest option -->
+						<h2 id="guestlabel">Book as Guest</h2>
+<!-- 							<div id="guestcontent">
+ -->						<div class="grid">
+								<div id="guestContent">
+
+								<!-- select one location. paragraphs keep them clean and organized-->
+<!-- 								<h3>Select a Location:</h3>
+-->								<h3>Step 1</h3>
+								<p>
+									<div class="fields">
+										Select a Location:
+									<div>
+								</p>
+								<p>
+								<form class="fields">
+									<!-- there will be links to the golf pages for users who want further information on each golf course -->
+									<input type="checkbox" id="checkbox">&nbsp;&nbsp;Burnaby Mountain Golf Course
+									<a href="burnaby_mountain.html" target="_blank" id="infoIcon">
+										?
+									</a>
+								</form>&nbsp;&nbsp;&nbsp;&nbsp;
+								<form class="fields">
+									<input type="checkbox" id="checkbox1">&nbsp;&nbsp;Riverway Golf Course 
+									<a href="riverway.html" target="_blank" id="infoIcon1"> 
+										?
+									</a>
+								</form>
+								</p>
+								<!-- select a date is a drop down calendar for easier date selection-->
+								<p>
+									<form class="fields">
+										Select a Date:
+										<input type="date" name="Date" id="selectdate">
+									</form>
+								</p>
+								<!-- select a time is a drop down menu, they will need to select from 5 times-->
+								<p>
+									<form class="fields">
+										Select a Time:
+										<select>
+											<option value ="1">9:00 AM</option>
+											<option value ="2">10:00 AM</option>
+											<option value ="3">11:00 AM</option>
+											<option value ="4">12:00 PM</option>
+											<option value ="5">1:00 PM</option>
+										</select>
+									</form>
+								</p>
+								<!-- select the number of players is also a drop down menu -->
+								<p>
+									<form class="fields">
+										Number of Players:
+										<select>
+											<option value ="1">1</option>
+											<option value ="2">2</option>
+											<option value ="3">3</option>
+											<option value ="4">4</option>
+										</select>
+									</form>
+								</p>
+							<!-- Cancel and Next buttons, it is 7 columns in the main 12 columns and will arranged in a line left to right-->
+									
+								</div>
+							</div>
+							<a href="bookTeeTime_3.html" id="bookButton">Book Now ></a>
+						</div>
+						</div>
+					</div>
+				</section>
+		</article>
+
+<!-- =====================================  footer =================================== -->
+
+		<!--footer that contains information about address-->
+		<footer>
+
+			<!-- address -->
+			<img src="images/footer.png" width="1000" height="650" alt="homepage main png" class="logo_image">
+
+			<div class="address">
+				<!-- address divided into 3 lines using break-->
+				City of Burnaby 101-4946 Canada Way Burnaby, British Columbia V5G 4H7&nbsp;&nbsp;&nbsp; Phone: 604-280-7355
+			</div>
+
+		 </footer>
+
+
+	</body>
+
+
+</html>
+

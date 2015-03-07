@@ -1,5 +1,6 @@
 html { 
 	font-family: Oswald, Arial, sans-serif;
+	font-weight: 100;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	position:relative;
@@ -48,6 +49,19 @@ h1 a, h1 a:visited, h1 a:hover {
 
 /* =========================== navigation  ============================== */
 
+/* fixed on top of screen... work on this!
+	nav{
+	position: relative;
+	top: -1rem;
+	left: 0;
+	right: 0;
+	bottom: 1rem;
+	z-index: 2;
+	margin: 0;
+
+	position: fixed;
+
+}*/
 
 
 /* in nav,  make all bottons light grey */
@@ -65,6 +79,7 @@ nav a, nav a:visited {
 	padding: 0.7em 0.7em;  /* space around of the text and inside of the bg border box */
 	width: 100%;  /* make the 6th nav links long enough to connect (touching) to each other */
 
+
 }
 
 /* in nav,  make all bottons white after hovering  */
@@ -73,9 +88,21 @@ nav a:hover, nav a:active, nav a:focus {
   	font-weight: 100;
   	font-size: 0.88rem;
   	text-decoration: none;
-	background-color: rgb(233,173,63);  /* when mouse is on top of the link text or link bg box, bg becomes darker gray */
+	background-color: rgb(233,173,63); /* when mouse is on top of the link text or link bg box, bg becomes darker gray */
 	color: white;  /* /* when mouse is on top of the link text or link bg box, link text becomes white */ 
 }
+
+/*
+
+.blueButton a, .blueButton a:visited{
+	background-color: #70D46E;   
+	color: black;  
+}
+
+.blueButton a:hover, a:active, a:focus{
+	color: white;   
+
+}*/
 
 
 /*  -----------------  dropdown - submenu block  -----------------*/
@@ -105,7 +132,7 @@ ul ul {
   -transition: opacity 0.2s;
 
   z-index: 1;
-  background-color: rgba(129, 0, 0, 1);  /* set the link bg as light gray */
+  background-color: rgba(129, 0, 0, 0);  /* set the link bg as light gray */
 
 }
 
@@ -130,62 +157,78 @@ ul :hover ul {
 
 }
 
+
 /* ======================= general css ======================= */
 
 body{ 
 	font-family: 'Noto-Sans', sans-serif;
-	
-	background-image: url("../images/bg.jpg");
+	font-weight: 100;
+	background-image: url("../img/bg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	color: rgb(200,200,200);
+	color: white;
 	margin: 0 auto;
-	padding: 0 auto;
 	text-align: center;
+	/*max-width:80%;*/
 	border: none;
 	bottom: 0;
 	height: 100%;
 /*	min-width: 700px;*/
 }
 
+
+
+
 p {
 	font-family: 'Noto-Sans', sans-serif;
 	font-weight: 100;
 	font-size: 0.85rem;
 	padding: 0;
-	line-height: 1.4em; 
 }
 
-/*ul, ol {
+ul, ol {
+/*	float:right;*/
 	font-size: 0.9rem;
 	line-height: 1.3em; 
-	text-align: left;
+	text-align: right;
 	padding: 0em 1em;
-}*/
+}
 
 /* section colour is light grey */
-/*section {
+section {
 	display: inline-block;
-	font-size: 1rem;
-	color: black;
+	color:rgb(230,230,230);
 	background-color: white;
 	max-width: 100%;
 	margin: 1rem auto;
+	font-size: 3rem;
 }
-*/
+
+/* each article styling */
+article {
+	display: inline-block;
+	background-color: rgba(240, 240 ,240 ,0);
+	width:80%;
+	margin: 1rem auto;
+	padding: 0;
+
+}
 
 a, a:visited, a:hover {
 	text-decoration: none;
-	color:rgb(220,220,220);
+	color:white;
+	font-size: 1.2rem;
+
 }
  
 a:hover {
 	color: rgb(233,173,63);
+
 }
 
-/*
+
 .myButton, .myButton:visited  {
-	background-color:rgb(222,0,0);
+	background-color: #94D4A0;
 	color: black;
 	text-decoration: none;
 	text-align: center;
@@ -197,72 +240,1176 @@ a:hover {
 	font-size:0.85rem;
 	padding:0.5rem;
 	margin: 0.5rem;
-}*/
+}
 
 
 /* make all bottons gray after hovering  */
-/*.myButton:hover, .myButton:active, .myButton:focus {
+.myButton:hover, .myButton:active, .myButton:focus {
 	background-color: gray;
 	text-decoration: none;
 	color: white;
-}*/
+}
+
+
+/* the content section, create a bg box in light grey, 
+make the box 1000 x 620. make a space of 1 em in all 4 side outside the box. */  /*  */  /*  */
+
+
+
+h2 {
+	font-family: 'Noto-Sans', sans-serif;
+	font-weight: 100;
+	font-size: 1rem; 
+	padding-left: 1rem;   /* the space of left beside the title */
+
+}
+
+
+/*  the black bar bg for the news h2 */
+h2.bar_header{
+	font-family: 'Noto-Sans', sans-serif;
+	font-weight: 100;
+	text-align: left;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.2);
+
+	padding: 0.5rem 0rem 0.5rem 1rem;   /* the space of top and bottom around the title */
+	width: 100%;   /*  999 px - 1rem = 983px  blue bar*/
+	max-width: 100%;
+	margin: 0;
+
+/*	min-width: 700px;*/
+}
+
 
 
 /*-----------------------------  home   ---------------------------*/
 
-.home_img{
+
+section.home_row1{
+	background-image: url("../img/4people.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	margin: 1rem auto;
+	margin-bottom: 1rem;
+	width: 80%;
 	max-width: 100%;
-	height: auto;
+	background-color: rgba(240, 240 ,240 ,0);
 }
 
 
-/*.home_booking{
-	position: absolute;
+section.home_row2{
+/*	background-image: url("../images/home_image.jpg");*/
+	margin: 0 auto;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	width: 80%;
+	max-width: 100%;
+	background-color: rgba(240, 240 ,240 ,0.2);
+}
+
+
+
+
+section.home_text_block1 {
+
 	text-align: center;
-	top: 40%;
-	left:45%;
+	line-height:1.4;
+	background-color: rgba(240, 240 ,240 ,0);
+	padding:1rem;
+	margin: 20%;
 
-}*/
 
-/*-------------------------  services page  -------------------------*/
-.service_row{
-	margin: 0rem;
+
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.home_h1{
+	font-size: 2.5rem;
+	color: white;
 
 }
 
-/*section.content_box{
-	background-color: rgb(239, 252, 255);
-	border-radius: 10;
-	border: black 1;
-	margin: 3rem;
+.home_p{
+	font-size: 1.3rem;
+	color: white;
 }
-*/
 
+.home_h2{
+	font-size: 1.1rem;
+	color: white;
 
-.services_1_block{
+}
+
+section.home_text_block2 {
+
+	width:100%;
+	max-width: 100%;
+	line-height:1.4;
 	text-align: left;
-	line-height: 1.3em; 
-	margin: 1.5rem;
-	margin-top:1rem;
-	margin-bottom:1rem;
+	background-color: rgba(255,255,255,0);
+	padding: 1rem;
+	margin: 0;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-.services_title{
-	border-style: solid white 2px;
+
+section.home_text_block3 {
+
+	width:100%;
+	max-width: 100%;
+	line-height:1.4;
+	text-align: left;
+	background-color: rgba(2240, 240 ,240, 0);
+	padding: 1rem;
+	margin: 0;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+.home_divider {
+	position: relative;
+	top: 5%;
+	bottom: 5%;
+	border-right: 1px solid #BABABA;
+}
+
+h2#home_h2 {
+	font-family: 'Noto-Sans', sans-serif;
+	font-weight: 500;
+	font-size: 1rem; 
+	text-decoration: none;
+	padding: 0 0 0 1rem;
+}
+
+#homeContent{
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+#homeContent1{
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+#homeContent2{
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+#homeContent3{
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+#homeContent4{
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+#homeContent5{
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+/*-------------------------  news page  -------------------------*/
+section.news_row1 {
+	background-color: rgba(255,255,255,0.1);
+	margin: 1rem auto;
+	margin-bottom: 0;
+	width:80%;
+	height: auto;
+	max-width: 100%;
+/*	min-width: 700px;*/
+}
+
+
+/* line-height:line-height: for the 3 article titles (white bold and large) */
+h2.news_article_title {
+
+	font-weight: 100;
+	font-size: 1rem; 
 	text-align: center;
-	padding-top: 0.6rem;
-	padding-bottom: 0.4rem;
-	border-radius: 0.1rem;
-	margin-right: 40%;
+	color: white;
+	padding: 0.3rem;
+	max-width: 100%;
+
+	border: 2px solid rgb(233,173,63);
+	background-color: rgba(233,173,63,0.25);
+
 }
 
 
+section.news_article_block{
+	text-align: left;   /* align text of title, paragraph, and 3 links to the left side egde */
+	height:auto;
+	line-height:1.4;
+	background-color: rgba(255,255,255,0);
+	font-size: 0.85rem;
+	margin: 2em 1rem;   /* outside the rectangle box, leave 1em space for all 4 sides */
+	float:left;   /* move the rect box to the left so that the underneath 2 boxes can be parallel with it in a row  */
+	margin-left: 5%;
+	max-width: 90%;
 
-.services_title:hover,  .services_title:active,  .services_title:focus {
- 	color: white;
- 	background-color: rgb(200,200,200);  
+}
+
+
+/* h3 for the small title under each articles (tornament, Tour confident, Tiger Tracker)  */ /*  */
+h3.news_article_title {
+	font-family: 'Noto-Sans', sans-serif;
+	font-weight: 100;
+	padding: 0.5rem 1em;
+	margin: 0 2rem 0 0;
+	font-size: 1rem;
+}
+
+p.newscontent {
+	padding: 0.5rem;
+}
+
+section.news_row2 {
+	background-color: rgba(255,255,255,0.1);
+	margin: 1rem 1rem;
+	margin-bottom: 6.5rem;
+	width: 80%;
+	height: auto;
+	max-width: 100%;
+	text-align: left;
+	padding: 1rem;
+}
+
+.news_divider {
+	position: relative;
+	top: 5%;
+	bottom: 5%;
+	border-right: 1px solid #C5C5C5;
+}
+
+h3.news_h3 {
+	font-family: 'Noto-Sans', sans-serif;
+	font-weight: 500;
+	font-size: 1rem; 
+	padding-left: 1rem;   /* the space of left beside the title */
+	text-align: left;
+}
+
+
+img.news_image{
+	max-width: 94%;
+	margin-left:3%;
+}
+
+
+/*-------------------------  golf course pages -------------------------*/
+
+
+section.golfCourse_row1{
+/*	background-image: url("../images/home_image.jpg");*/
+	margin: 1rem auto;
+	margin-bottom: 0rem;
+	width: 80%;
+	max-width: 100%;
+	background-color: rgba(240, 240 ,240 ,0.1);
+}
+
+section.golfCourse_image {
+
+	background-color: rgba(255,255,255,0.1);
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	padding: 0.5rem;
+	padding-bottom: 0;
+	margin: 0;
+}
+
+
+section.golfCourse_text_block1 {
+
+	/*width:100%;*/
+	max-width: 100%;
+	line-height:1.4;
+	text-align: left;
+	background-color: rgba(240, 240 ,240 ,0);
+	padding:1rem 1rem 1rem 2rem;
+	margin: 0;
+
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+h3.golfCourse_h2 {
+	padding-left: 0;
+}
+
+.golfCourse_buttons{
+	margin: 0rem auto;
+	margin-bottom: 0;
+	background-color: rgba(240, 240 ,240 ,0.2);
+	width: 100%;
+}
+
+
+.golfCourse_divider {
+	position: relative;
+	top: 10%;
+	bottom: 10%;
+	border-right: 1px solid #C5C5C5;
+}
+
+
+section.golfCourse_row2{
+/*	background-image: url("../images/home_image.jpg");*/
+	margin: 0.5rem auto;
+	margin-bottom: 0rem;
+	width: 80%;
+	max-width: 100%;
+	background-color: rgba(240, 240 ,240 ,0.1);
+}
+
+section.golfCourse_text_block2{
+
+	width:100%;
+	max-width: 100%;
+	line-height:1.4;
+	text-align: left;
+	background-color: rgba(2240, 240 ,240, 0.1);
+	padding: 1rem 1rem 1rem 2rem;
+	margin: 0;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+#googleMap {
+       
+    max-width: 100%;
+    height: 300px;
+    background-color: #CCC;
+    margin: 0.5rem;
+}
+
+#googleMap2 {
+       
+    max-width: 100%;
+    height: 300px;
+    background-color: #CCC;
+    margin: 0.5rem;
+}
+
+
+section.golfCourse_gallery{
+	width:80%;
+	margin: 0.5rem auto;
+	margin-bottom: 6.5rem;
+	max-width: 100%;
+	line-height:1.4;
+	text-align: left;
+	background-color: rgba(240, 240 ,240 ,0.2);
+}
+
+img.golfCourse_gallery_image{
+	width:300px;
+	height:150px;
+	line-height:1.4;
+	text-align: left;
+	background-color: rgba(255,255,255,0.2);
+	padding:0.3rem;
+	margin-bottom: 1rem;
+}
+
+#bookings { 
+	text-decoration: none;
+	color: black;
+	text-align: center;
+}
+
+#golfButton1 {
+	padding: 0.5rem 2rem 0.7rem 2rem;
+	margin: 0 1rem 0 0;
+	text-decoration: none;
+}
+
+#golfButton1:hover {
+	background-color: #C5C5C5;
+	color: black;
+}
+
+#golfButton2 {
+	padding: 0.5rem 2rem 0.7rem 2rem;
+	margin: 0 1rem 0 1rem;
+	text-decoration: none;
+}
+
+#golfButton2:hover {
+	background-color: #C5C5C5;
+	color: black;
+}
+
+#golfButton3 {
+	padding: 0.5rem 1rem 0.7rem 1rem;
+	margin: 0 1rem 0 0;
+	text-decoration: none;
+}
+
+#golfButton3:hover {
+	background-color: #C5C5C5;
+	color: black;
+}
+
+#golfContent{
+	padding-right: 1rem;
+}
+
+#golfContent2{
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.golfContent3{
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+
+/* =========================== Registration page  ============================== */
+
+.register1{
+	display: block;
+	width: 80%;
+}
+
+table { 
+	display: inline-block;
+	margin-right: 0.2rem;
+}
+
+th,td {
+    padding: 0.4rem 0.4rem 0.4rem 0;
+    margin-left: 5rem;
+    font-size: 0.85rem;
+    text-align: left;
+}
+
+
+/* Name field */
+input.FirstName{
+width: 10rem;
+}
+
+/* Last field */
+input.LastName{
+	width: 10rem;
+}
+
+/* Email */
+input.Email{
+	width: 10rem;
+	
+}
+  
+/* Password*/
+input.Password{
+	width: 10rem;
+	margin-right: 20px;
+
+}
+
+
+/* Address field */
+input.Address{
+
+width: 10rem;
+
+}
+
+/* City field */
+input.city{
+
+width:10rem;
+}
+
+/* Postal Code */
+input.Postalcode{
+
+width: 10rem;
+
+}
+
+/* Birthdate field*/
+input.Birthdate{
+	width:3.2rem;		
+}
+
+input.month{
+width:3.2rem;
+}
+
+input.day{
+width:3.2rem;
+
+}
+/* Contact */
+
+input.PhoneNumber{
+width:10rem;
+
+}
+
+/*Newsletters */
+input.checkbox{
+margin-right: 1px;
+
+}
+
+/* login information content box styling */
+.RLoginContent {
+	display: inline-block;
+	padding: 1rem 5rem 2rem 5rem;
+	margin: 0 0 1rem 0;
+	text-align: left;
+	width: 80%;
+}
+
+#paymentInformation {
+	text-align: left;
+	padding: 0 0 0 4rem;
+}
+
+.payContent {
+	display: inline-block;
+	padding: 1rem 5rem 1rem 5rem;
+	margin: 0 0 3rem 0;
+	width: 80%;
+	text-align: left;
+}
+
+#loginRegisterContent {
+	text-align: left;
+	padding: 1rem 2rem;
+
+}
+
+#personalContent{
+	text-align: left;
+	padding: 1rem 2rem;
+
+}
+
+#cancelR {
+	background-color: #94D4A0;
+	float: right;
+	text-decoration: none;
+	color: black;
+	padding: 0.3rem 1.5rem;
+	margin: 2rem 1rem 2rem 0;
+	-webkit-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+}
+
+#nextR {
+	background-color: #94D4A0;
+	float: right;
+	text-decoration: none;
+	color: black;
+	padding: 0.3rem 1rem;
+	margin: 2rem 1rem 2rem 0;
+	-webkit-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+}
+
+#leftDivider {
+	position: relative;
+	top: 20%;
+	bottom: 10%;
+	border-left: 1px solid #C4C4C4;
+	padding-left: 2rem;
+}
+
+/* =========================== Payment-Info page  ============================== */
+
+
+
+.registerPayment{
+	margin: 3rem;
+	text-align: right;
+}
+
+.formPadding {
+
+}
+/* Card-holder Name */
+input.CardholderName{
+	
+	
+}
+
+/* Payment Type */
+input.PaymentType{
+	
+}
+/* Card Number */
+input.CardNumber{
+	
+}
+
+/* Expiration field*/
+input.year{
+	width: 2.2rem;
+
+}
+
+input.month{
+	width: 2.2rem;
+
+}
+
+
+/* Billing Address */
+input.BillingAddress{
+}
+
+/* City*/
+input.City{	
+}
+
+/* PostalCode*/
+input.PostalCode{	
+}
+
+/* CSC */
+input.CSC{
+	width: 2.4rem;
+
+}
+
+/* login information content box styling */
+.register2 {
+	padding-bottom: 1rem;
+	margin-bottom: 7rem;
+}
+
+.RLoginContent {
+	display: inline-block;
+	padding: 1rem 1rem 2rem 2rem;
+	margin: 1rem 1rem 2rem 1rem;
+	text-align: left;
+}
+
+/* personal information content box styling */
+.personalContent {
+	display: inline-block;
+	padding: 1rem 1rem 1rem 2rem;
+	margin: 1rem 2rem 2rem 0.5rem;
+	text-align: left;
+}
+
+/* login information content box styling */
+.creditContent {
+	display: inline-block;
+	padding: 1rem 1rem 1rem 1rem;
+	text-align: left;
+	width: 80%;
+}
+
+/* personal information content box styling */
+.billingContent {
+	display: inline-block;
+	padding: 1rem 1rem 1rem 2rem;
+	margin: 0 1rem 2rem 1rem;
+	text-align: left;
+}
+
+#finishP {
+	background-color: #94D4A0;
+	float: right;
+	text-decoration: none;
+	color: black;
+	padding: 0.3rem;
+	margin: 0 2rem 1rem 0;
+	-webkit-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+}
+#editP {
+	background-color: #94D4A0;
+	float: right;
+	text-decoration: none;
+	color: black;
+	padding: 0.3rem;
+	margin: 0 0.8rem 1rem 0;
+	-webkit-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+}
+
+#cancelP {
+	background-color: #94D4A0;
+	float: right;
+	text-decoration: none;
+	color: black;
+	padding: 0.3rem;
+	margin: 0 0.8rem 1rem 0;
+	-webkit-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+}
+
+
+/* ======== Book a tee time 1 ======== */
+
+#bookingMain{
+	padding: 2rem;
+	margin-bottom: 7rem;
+}
+
+
+#login {
+	display: block;
+	text-align: left;
+	margin: 1rem 2rem 4rem 2rem;
+}
+
+#loginlabel {
+	font-family: 'Noto-Sans', sans-serif;
+	width: 100%;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.2);
+	padding: 0.2em 1em;
+	margin: 0 2rem 1rem 0;
+}
+
+#logincontent {
+	padding: 1rem 2rem 14.7rem 0;
+	margin: 1rem;
+	width: 100%;
+}
+
+#loginButton{
+	margin-left: 1rem;
+}
+
+#registerButton{
+	margin-right: 3rem;
+}
+
+#guest {
+	display: block;
+	margin: 1rem 2rem 1rem 2rem;
+}
+
+#guestlabel {
+	font-family: 'Noto-Sans', sans-serif;
+	width: 100%;
+	text-align: left;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.2);
+	padding: 0.2rem 1rem;
+	margin: 0 2rem 1rem 0;
+}
+
+#guestContent {
+	padding: 0 1rem 1rem 2rem;
+	text-align: left;
+	width: 100%;
+}
+
+#infoIcon {
+	background-color: #94D4A0;
+	color: black;
+	margin: 0;
+	border-radius: 50%;
+	padding: 0.2rem 0.4rem;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 0.5rem;
+	width: 3px;
+	height: 3px;
+}
+
+#infoIcon:hover {
+	background-color: gray;
+	color: white;
+
+}
+
+#infoIcon1 {
+	background-color: #94D4A0;
+	color: black;
+	margin: 0;
+	border-radius: 50%;
+	padding: 0.2rem 0.4rem;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 0.5rem;
+	width: 3px;
+	height: 3px;
+}
+
+#infoIcon1:hover {
+	background-color: gray;
+	color: white;
+
+}
+
+/* fix positioning of book as guest article at 853px */
+
+#phone {
+	padding: 1rem;
+}
+
+
+#register {
+	background-color: #94D4A0;
+	text-decoration: none;
+	color: black;
+	padding: 0.3rem;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.15);
+	margin: 1rem 0.5rem 0 5rem;
+}
+
+#loginButton {
+	padding: 0.3rem 1rem;
+}
+
+#bookButton, #bookButton:visited  {
+	background-color: #94D4A0;
+	color: black;
+	text-decoration: none;
+	text-align: center;
+	-webkit-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+	display: inline-block;
+	font-size:0.85rem;
+	padding: 0.5rem 1.5rem;
+	margin: 0.5rem 1rem 1.5rem 10rem;
+	float: right;
+}
+
+
+/* make book bottons gray after hovering  */
+#bookButton:hover, #bookButton:active, #bookButton:focus {
+	background-color: rgb(233,173,63);
+	color: white;
+}
+
+#phone{
+	float: right;
+}
+
+#usernameField{
+	text-align: left;
+	margin-left: 3rem;
+}
+
+#passwordField{
+	text-align: left;
+	margin-left: 3rem;
+}
+
+#username{
+
+	width: 80%;
+}
+
+#password {
+	width: 80%;
+}
+
+
+#golfCourse {
+	width: 100%;
+}
+
+/* ======== book a tee time 2  ======== */
+
+.step1{
+	margin-bottom: 7.5rem;
+}
+
+#selectlabel {
+	font-family: 'Noto-Sans', sans-serif;
+	width: 100%;
+	text-align: left;
+	text-decoration: none;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 0.4em 1em;
+	margin: 0 2rem 1rem 0;
+
+}
+
+#selectdate {
+	width: 9rem;
+}
+
+.locationContent {
+	display: inline-block;
+	margin: 0 0 3rem 0;
+	padding: 1rem 1rem 1rem 4.5rem;
+	text-align: left;
+	width: 80%;
+}
+
+.bookingPhotos {
+	width: 33.33%;
+	height: 33.33%;
+	max-width: 100%;
+	padding: 1rem;
+}
+
+/* ======== book a tee time 3  ======== */
+
+.step2 {
+	margin-bottom: 6.5rem;
+}
+
+#paymentlabel {
+	font-family: 'Noto-Sans', sans-serif;
+	width: 100%;
+	text-align: left;
+	text-decoration: none;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 0.4em 1em;
+	margin: 0 2rem 1rem 0;
+}
+
+#selectlocation {
+	background-color: #ABABAB;
+	padding: 0.3rem;
+}
+
+#security {
+	width: 4rem;
+}
+
+.fielddata {
+	text-align: right;
+}
+
+.cancelEditNext {
+	float: right;
+}
+
+/* form size for expiration date and csc */
+.year2 {
+	width: 2.2rem;
+}
+
+.month2 {
+	width: 2.2rem;
+}
+
+.CSC2 {
+	width: 2.4rem;
+}
+
+.payContent {
+	display: inline-block;
+	padding: 1rem 5rem 2rem 5rem;
+	margin: 0 0 3rem 0;
+	width: 80%;
+	text-align: left;
+
+}
+
+#paySelection {
+	text-align: left;
+
+
 	}
+#paymentInformation {
+	text-align: left;
+	padding: 0 0 0 4rem;
+}
 
+.divider {
+	position: relative;
+	top: 20%;
+	bottom: 10%;
+	border-right: 1px solid #C4C4C4;
+}
+
+/* ======== book a tee time 4  ======== */
+
+
+#confirmationlabel {
+	font-family: 'Noto-Sans', sans-serif;
+	width: 100%;
+	text-align: left;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 0.4rem 1rem;
+	margin: 0 2rem 1rem 0;
+}
+
+.step3{
+	margin-bottom: 7.5rem;
+}
+
+.content {
+	display: inline-block;
+	padding: 1rem 1rem 1rem 4.5rem;
+	margin: 0 0 3rem 0;
+	text-align: left;
+	width: 80%;
+}
+
+#hyperlinks {
+	float: right;
+}
+
+/* ======= general book a tee time classes ========== */
+.teetimenav {
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+	padding: 0.5rem;
+	margin: 0rem 0.5rem;
+	width: 85%;
+
+}
+#active {
+	background: rgb(233,173,63);
+	color: white;
+}
+#active2 {
+	background: white;
+	color: black;
+}
+
+#inActive {
+	background-color: #AAA;
+	color: white;
+}
+
+#inActive2 {
+	background-color: #AAA;
+	color: white;
+}
+
+#complete:hover {
+	background-color: #696969;
+	color: white;
+}
+
+.button {
+	background-color: #498A47;
+	text-decoration: none;
+	color: black;
+	padding: 0.3rem;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.15);
+	-webkit-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+}
+
+/* fields */
+.fields {
+	display: inline-block;
+	text-align: left;
+	text-decoration: none;
+	padding: 0 0rem;
+}
+
+#cancel {
+	padding: 0.3rem 1.5rem;
+	margin-top: 2rem;
+	margin-bottom: 0;
+	-webkit-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+	float: right;
+}
+
+#next {
+	padding: 0.3rem 1.5rem;
+	margin-top: 2rem;
+	margin-bottom: 0;
+	-webkit-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+	float: right;
+}
+
+img {
+	height: auto;
+	width: auto;
+	max-width: 100%;
+}
+
+
+h2 {
+	
+	font-family: 'Noto-Sans', sans-serif;
+	font-weight: 200;
+	font-size: 1rem;
+	text-align: left;
+}
+
+h3 {
+	font-family: 'Noto-Sans', sans-serif;
+	font-weight: 100;
+	font-size: 1.1rem;
+	text-align: left;
+}
+
+h4 {
+	font-family: 'Noto-Sans', sans-serif;
+	font-weight: 100;
+	font-size: 1rem;
+}
+
+strong {
+	font-weight: bold;
+}
+
+a.active {
+	background-color:rgb(233,173,63);
+	color: black;
+	text-decoration: none;
+}
+
+/* ------------- forms ---------- */
+
+form {
+	font-size: 0.85rem;
+		/*text-align: left; */
+}
+
+/* -------------------- button styles for general book a tee time pages ------- */
+
+#finish {
+	float: right;
+}
+
+#finish:hover {
+	background-color: green;
+}
+
+#edit {
+	padding: 0.3rem 2rem;
+	margin-top: 2rem;
+	margin-bottom: 0;
+	-webkit-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+}
+
+#edit:hover {
+	background-color: green;
+}
+
+#cancel { 
+	float: right;
+}
+
+#cancel:hover {
+	background-color: green;
+}
+
+#next {
+	float: right;
+}
+
+#next:hover {
+	background-color: green;
+}
 
 /* =========================== footer  ============================== */
 
@@ -284,6 +1431,12 @@ footer{
 
 }
 
+.logo_image{
+	width: 100px;
+	height: auto;
+	margin-left: 10%;
+
+}
 
 .address{
 	margin-left: 10%;
@@ -298,3 +1451,307 @@ footer{
 /* media queries */
 
 /* ================================= lydia's ============================== */
+
+
+/* hide "more" link when screen is  >= 1200px */
+@media (max-width: 1500px){
+	.golfCourse_p2{
+		display: none;
+}
+
+@media (min-width: 1329px){
+		a.home_p1_more{
+			display: none;
+		}
+	}
+
+/* hide "p2" when screen is  <= 1200px */
+@media (max-width: 1330px){
+		p.home_p2 {
+			display: none;
+		}
+/* show "more" link when screen is >= 1200px */
+		a.home_p1_more{
+			display: inline-block;
+		}
+
+		.golfCourse_p2{
+		display: none;
+	}
+
+
+@media (max-width: 900px){
+		.news_divider{
+			border-right: none;
+			border-bottom: 1px solid gray;
+		}
+
+
+@media (max-width: 700px){
+
+		input {
+			max-width: 100%;
+		}
+
+		section.home_row1{
+			width:100%;
+			margin-bottom: 0.5rem;
+		}
+
+		section.home_row2{
+			width: 100%;
+			margin-bottom: 7rem;
+		}
+
+		section.news_row1{
+			width: 100%;
+		}
+
+		section.news_row2{
+			width: 100%;
+			margin: 1rem 0 7.5rem 0;
+		}
+
+
+		section.golfCourse_row1{
+			width: 100%;
+		}
+
+		section.golfCourse_row2{
+			width:100%;
+		}
+
+		section.golfCourse_buttons{
+			width: 100%;
+			margin: 0;
+
+		}
+
+		section.golfCourse_gallery {
+			width: 100%;
+			padding: 0;
+		}
+
+
+@media (max-width: 500px){
+
+		.golfCourse_divider{
+			border-right: none;
+			border-bottom: 1px solid gray;
+		}
+	}
+
+
+/*================= allison's ====================*/
+
+@media (max-width: 702px){
+	#bookingMain {
+		max-width: 100%;
+		margin: 1rem 0 7rem 0;
+
+	}
+	section {
+		max-width: 95%;
+		margin: 0;
+
+	}
+	#guest {
+		max-width: 95%;
+	}
+	#guestContent {
+		max-width: 95%;
+		margin: 1rem 5rem 1rem 1rem;
+	}
+	#paymentInformation {
+		padding: 0;
+	}
+	.teetimenav {
+		max-width: 100%;
+	}
+
+}
+
+@media (max-width: 580px){
+	#bookingMain{
+		margin-bottom: 8rem;
+	}
+	.payContent {
+		padding: 2rem;
+	}
+	.content {
+		padding: 1.5rem;
+		margin: 0 0 1rem 0;
+		text-align: left;
+		width: 100%;
+	}
+	.teetimenav {
+		width: 95%;
+	}
+	.register1 {
+		margin: 1rem 0 7.5rem 0;
+		width: 100%;
+
+	}
+}
+
+@media (max-width: 800px){
+	.teetimenav {
+		margin: 0.3rem;
+	}
+}
+@media (max-width: 860px){
+	.divider{
+		border: none;
+	}
+	#paymentInformation {
+		padding: 0;
+	}
+	.content {
+	padding: 1rem 1rem 1rem 3rem;
+}
+
+
+}
+
+@media (max-width: 1115px){
+	#login{
+		margin: 1rem;
+	}
+	#guest{
+		margin: 1rem;
+	}
+	#bookingMain{
+		padding: 1rem;
+	}
+	#cancel {
+		padding: 0.3rem 0.5rem;
+		margin-top: 2rem;
+	}
+	#next {	
+		padding: 0.3rem 0.5rem;
+		margin-top: 2rem;
+	}
+	#edit {
+		padding: 0.3rem 2rem;
+		margin-top: 3rem;
+		margin-bottom: 0;
+	}
+	a#cancelR.myButton {
+		margin: 0.5rem;
+		padding: 0;
+	}
+	a#nextR.myButton {
+		margin: 0.5rem;
+}	
+
+
+}
+
+@media (max-width: 1000px){
+
+	img.golfCourse_gallery_image{
+			display: none;
+		}
+	.home_divider{
+			border-right: none;
+			border-bottom: 1px solid gray;
+		}
+	section.home_text_block3{
+			padding-top: 0;
+		}
+	article.step2 {
+		width: 100%;
+	}
+		#edit {
+		padding: 0.3rem 2rem;
+		margin-top: 2rem;
+		margin-bottom: 0;
+		float: top;
+	}
+	article.step3 {
+		width: 100%;
+	}
+	.register2 {
+		width: 100%;
+		margin-bottom: 10rem;
+	}
+	.billingContent {
+		padding: 0;
+		margin: 0;
+	}
+	.creditContent{
+		padding: 0;
+	}
+	#billing {
+		padding: 1rem;
+		margin: 0;
+	}
+
+
+}
+
+/* mobile size */
+@media (max-width: 450px){
+	#bookingMain{
+		width: 100%;
+		padding: 0;
+	}
+	#guest {
+		margin: 0 0.5rem 1rem 0.5rem;
+	}
+	#login {
+		margin: 1rem 0.5rem 0rem 0.5rem;
+	}
+	#checkbox {
+		width: auto;
+	}
+	#checkbox1 {
+		width: auto;
+	}
+	article.step1 {
+		width: 100%;
+		margin: 1rem 0 7.5rem 0;
+		padding: 0;
+	}
+	article.step2 {
+		width: 100%;
+		margin: 1rem 0 7.5rem 0 ;
+	}
+	.payContent {
+		padding: 1rem;
+	}
+	#step1Main {
+		margin: 0;
+	}
+	.locationContent {
+		padding: 1rem 2.5rem 2.5rem 2.5rem;
+	}
+	.RLoginContent {
+		margin: 0.5rem;
+		padding: 0.5rem;
+	}
+	input.Birthdate {
+		width: 2.2rem;
+	}
+	.payContent {
+		padding: 1rem 2rem 2rem 2rem;
+		margin: 0 0 3rem 0;
+		width: 100%;
+	}
+	.content {
+		padding: 1rem 2rem 2rem 2rem;
+	}
+	.loginRegisterContent {
+		margin: 0;
+		width: 100%;
+	}
+	.register2 {
+		margin-bottom: 7.5rem;
+	}
+}
+
+@media (min-width: 1400px){
+	input.Birthdate {
+		width: 2.2rem;
+	}
+}

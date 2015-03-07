@@ -2,8 +2,6 @@
 <!-- The ordering of tags is from top left to bottom right, tags that are higher in hierarchy are indented less, and tags that are lower in hierarchy are indented more (increments of 1 indent per level of hierarchy). -->
 <html lang="en">
 	<head>
-		<link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 		<title>Home</title>
 		<meta charset = "utf-8">
 		<link rel="stylesheet" href="css/normalize.css">
@@ -18,106 +16,101 @@
 		<!-- specifies a header for a burnaby mountain course-->
 		<header > 
 
-		
 				<!-- search box -->
+			<!-- <input class="headerInput" type="text" style="width:200px;" >  -->
 			<!-- defines this html -->
-			<h1><a href="home.html">Lim &amp; Company Lawyers </a></h1>  
+			<h1><a href="home.html"> Lim &amp; Company Lawyers </a></h1>  
 
 		 </header>
-<!-- =====================================  navigation =================================== -->
-	
-		<!-- defines a set of navigation links.-->
+<!-- =====================================  Navigation =================================== -->
+
+				<!-- defines a set of navigation links.-->
 	<nav class="grid">	 
-		<ul>
 
 			<div class="col-1of6">
-					<!-- a link to home page -->
-					<a href= "home.html" > Home </a> 
-			</div>
-
-			<div class="col-1of6">
-					<!-- a link to home page -->
-					<a href= "about.html" > About </a> 
-			</div>
-
-						<!-- a link to events page-->	
-
-			<div class="col-1of6">
-				<a href= "services.html"> Services </a>
-						<!-- list under booking menu -->
-					<!-- <ul>
-						<li> <a href="services.html"> Commercial Law</a> </li> 
-						<li> <a href= "services.html"> Family Law</a> </li> 
-						<li> <a href= "services.html"> Wills &amp; Estate Law</a>  </li> 
-						<li> <a href= "services.html"> Real Estate Law</a>  </li> 
-						<li> <a href= "services.html"> Immigration Law</a>  </li> 
-						<li> <a href= "services.html"> Litigation</a>  </li> 
-					</ul> -->
+				<div>
+					<a href= "home.html" id="active"> Home </a> 
+				</div>
 			</div>
 
 
-				<!--a link to golf courses page -->
 			<div class="col-1of6">
-				<a href= "lawyers.html" > lawyers </a> 
-
+				<a href= "service.html"  > Services </a>
 			</div>
 
-				<!-- a link to bookings page-->
+
 			<div class="col-1of6">
-				<a href= "video.html" > Video Centre </a> 
+				<a href= "lawyer.html" > Lawyers </a> 
 			</div>
-			<!-- a link to lessons page -->
 
 
-			<!-- a link to about us page-->
+						<!-- a link to about us page-->
 			<div class="col-1of6">
 				<a href= "contact.html"> Contact </a> 
 			</div>
-		</ul>
-
 	
 	</nav>
 
+
 <!-- =====================================  content =================================== -->
-		
-			<section >
-				<!-- the big background picture on the very back-->
-				<img src="images/4people.jpg" width="1920" height="1080" alt="homepage main jpg" class="home_img" >
-			</section>	
 
-		
-			<section class="home_booking"> 
-			<!-- head 2 title  -->
-				<h2 > Lim &amp; Company Lawyers </h2>
-				<!-- 1st paragraph --> 
-				<h2 >
-					<!--  insert break lines inside the paragraph --> 
-					 The creative solution for your legal needs
-				 </h2>
+				<!-- the main section (welcome + tips)  -->
+			<section class="home_row1"> 
 
-				 <h3>
-					<a href= "services.html" class="services_title"> Book an Appointment </a>
+					<div >
+						<section class="home_image">
+							<!-- the big background picture on the very back-->
+							<!-- <img src="img/4people.jpg" width="1500" height="1000" alt="homepage main png" > -->
+						</section>	
+					</div>
 
-				</h3>
 
-				<p></p>
-				<p></p>
-				<p></p>
+
+						<section class="home_text_block1">
+						<!-- head 2 title  -->
+							<h2 class="home_h1"> Lim &amp; Company Lawyers </h2>
+							<!-- 1st paragraph --> 
+							<p class="home_p">
+								The creative solution for your legal needs.
+							</p>
+
+							<h2 class="news_article_title" > <a href="service.html" > Book an Appointment</a> </h2>
+
+
+						</section>	
+			
+
+			</section>
+
+<!-- ·····································  row 2 ··································· -->
+			<section class="home_row2"> 
+
+					<div class="col-1of3">
+						<section class="home_text_block2"> 
+							<div class="home_divider">
+							<!-- head 3 title -->
+								<img src="img/book.png" width="1290" height="960" alt="homepage main png" >
+							</div >
+						</section>
+						
+					</div>
+
+
+					<div class="col-2of3">
+						<section class="home_text_block3"> 
+								<h2 class="home_h2"> <strong>About Us <strong> </h2>
+								<!-- paragraph for the tip -->
+								<p id="homeContent3">
+									For almost 30 years, Lim & Company Lawyers has provided a broad range of high quality legal services. While independently focused on their respective areas of expertise, our professionals work together to give our clients timely access to our best advice. Our lawyers appear regularly before the Supreme Court of Canada and are experienced in handling issues related to the legal areas quoted on this site. Below you'll find information on our main areas of expertise.
+								</p>
+						</section>
+					</div>
+
 
 			</section>
 
 <!-- =====================================  footer =================================== -->
 
-		<!--footer that contains information about address-->
-		<footer>
-
-
-			<div >
-				<!-- address divided into 3 lines using break-->
-				2232 West 41st Ave, Vancouver BC V6M 1Z8 &nbsp;&nbsp;&nbsp; Phone: 604-266-1988
-			</div>
-
-		 </footer>
 
 
 	</body>
