@@ -1,0 +1,162 @@
+<!doctype html>
+<!-- The ordering of tags is from top left to bottom right, tags that are higher in hierarchy are indented less, and tags that are lower in hierarchy are indented more (incrstrongents of 1 indent per level of hierarchy). -->
+<html lang="en">
+	<head>
+		<title>Booking Payment</title>
+		<meta charset = "utf-8">
+		<link rel="stylesheet" href="css/normalize.css">
+    	<link rel="stylesheet" href="css/main.css">
+    	<link rel="stylesheet" href="css/grid.css">
+
+	</head>
+	<!-- G class structure: 16 columns, 2 columns on the left and  2 columns on the right. The  classdle 12 columns will be actual content. -->
+	<body>
+		<!-- The header tag includes the heading, search bar and the main navigation which will be included on all pages of this website. This is sstrongantically appropriate because it will be on all the pages like a header is.-->
+<!-- =======================================  Header ===================================== -->
+
+			<!-- specifies a header for a burnaby mountain course-->
+		<header > 
+
+
+			<!-- defines this html -->
+			<h1><a href="home.html">Lim &amp; Company Lawyers</a></h1>  
+
+		 </header>
+
+<!-- =====================================  Navigation =================================== -->
+
+
+				<!-- defines a set of navigation links.-->
+	<nav class="grid">	 
+
+			<div class="col-1of6">
+				<div>
+					<a href= "home.html" > Home </a> 
+				</div>
+			</div>
+
+
+			<div class="col-1of6">
+				<a href= "service.html" id="active" > Services </a>
+			</div>
+
+
+			<div class="col-1of6">
+				<a href= "lawyer.html" > Lawyers </a> 
+			</div>
+
+
+						<!-- a link to about us page-->
+			<div class="col-1of6">
+				<a href= "contact.html"> Contact </a> 
+			</div>
+	
+	</nav>
+<!-- =======================================  Main Content ===================================== -->
+
+		<!-- This article is for payment of a selected tee time and has changed from the booking page-->
+		<article class="step2">
+			<!-- The following heading will be 1 column into the 12 column main -->
+			<div class="grid">
+				<h2 id="paymentlabel">Payment</h2>
+<!-- ============================= Book a Tee Time sub navigation =========================== -->
+
+				<!-- This navigation is in the booking a tee time section which will be on all pages of this process, they start 2 columns in the main body, each button takes up a column and a gutter and is top to bottom navigation. -->
+				<nav>
+					<div class="teetimenav">
+					<div class="col-1of3">
+						<a href = "book_2.html" class="teetimenav" id="inActive"> Step 1 &#x2713;</a>
+					</div>
+					<div class="col-1of3">
+						<a href = "book_3.html" class="teetimenav" id="active2"> Step 2</a>
+					</div>
+					<div class="col-1of3">
+						<a href = "book_4.html" class="teetimenav" id="inActive2">Step 3</a>
+					</div>
+					</div>
+				</nav>
+
+
+<!-- ============================= Payment Information =========================== -->
+			<div class="grid">
+			<!-- Confirmation of previous page with total amount owing, it is 4 columns in the 12 column main  -->
+			<section class="payContent">
+
+			<div class="col-5of12" id="paySelection">
+			<div class="divider">
+
+				<h3> Your Selection </h3>
+				<p>
+					<strong>Location:</strong> Vancouver Location
+				</p>
+				<p>
+					<strong>Day:</strong> Mar 8th, 2015
+				</p>
+				<p>
+					<strong>Service: </strong> Family Law
+				</p>
+				<p>
+					<strong>Total:</strong> $149.50
+				</p>
+				<!-- enter payment information (or an auto filled form for those who have logged in) -->
+			</div>
+			</div>
+
+				<div class="col-7of12" id="paymentInformation">
+
+					<h3>Payment Information:</h3>	
+					<table>
+						<tr>
+							<td>Cardholder Name:</td>
+							<td><input type="text"></td>
+						</tr>
+						<tr>
+							<td>Payment Method:</td>
+							<td><input list="paymentmethod">
+								<datalist id="paymentmethod">
+									<option value="Visa">
+									<option value="Mastercard">
+									<option value="American Express">
+								</datalist>
+							</td>
+						</tr>
+						<tr>
+							<td>Card Number:</td>
+							<td><input type="text"></td>
+						</tr>
+				 		<tr>
+					 		<td>Expiration Date:</td>
+					 		<td><input type="text" class="year2"> / <input type="text" class="month2"> </td>
+					 	</tr>
+					 	<tr>
+					 		<td>CSC</td>
+					 		<td><input type="text" class="CSC2"></td>
+					 	</tr>
+					 </table>
+					<!-- Cancel Edit and Next buttons, it is 6 columns in the main 12 columns, and will arranged in a line left to right -->
+						
+				</div>
+					<div class="col-12of12">
+						<a href = "book_2.html" class="myButton" id="edit">Edit</a>
+
+						<a href = "book_4.html" class="myButton" id="next">Pay Now ></a>
+
+						<a href= "home.html" class="myButton" id="cancel">Cancel</a>
+				</div>
+				</section>
+				<!-- selection buttons -->
+
+
+			</div>
+		</div>
+	</div>
+		</article>
+
+<!-- =====================================  footer =================================== -->
+
+	</body>
+
+
+
+
+</html>

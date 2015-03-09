@@ -27,7 +27,7 @@ header{
 
 
 
-/* the "Golf Burnaby" heading */
+/*  heading */
 h1 {
 	font-family: 'Noto-Sans', sans-serif;
 	font-weight: 100;
@@ -43,7 +43,6 @@ h1 {
 h1 a, h1 a:visited, h1 a:hover {
 	text-decoration: none;
 	color: white;
-	font-size: 1.8rem;
 }
 
 
@@ -85,24 +84,14 @@ nav a, nav a:visited {
 /* in nav,  make all bottons white after hovering  */
 nav a:hover, nav a:active, nav a:focus {
 	font-family: 'Noto-Sans', sans-serif;
-  	font-weight: 100;
-  	font-size: 0.88rem;
+/*  	font-weight: 100;
+  	font-size: 0.88rem;*/
   	text-decoration: none;
-	background-color: rgb(233,173,63); /* when mouse is on top of the link text or link bg box, bg becomes darker gray */
+	background-color: rgba(233,173,63,0.5); /* when mouse is on top of the link text or link bg box, bg becomes darker gray */
 	color: white;  /* /* when mouse is on top of the link text or link bg box, link text becomes white */ 
 }
 
-/*
 
-.blueButton a, .blueButton a:visited{
-	background-color: #70D46E;   
-	color: black;  
-}
-
-.blueButton a:hover, a:active, a:focus{
-	color: white;   
-
-}*/
 
 
 /*  -----------------  dropdown - submenu block  -----------------*/
@@ -198,9 +187,8 @@ ul, ol {
 section {
 	display: inline-block;
 	color:rgb(230,230,230);
-	background-color: white;
 	max-width: 100%;
-	margin: 1rem auto;
+	margin: 1rem;
 	font-size: 3rem;
 }
 
@@ -222,16 +210,20 @@ a, a:visited, a:hover {
 }
  
 a:hover {
-	color: rgb(233,173,63);
+	color: rgba(233,173,63,1);
 
 }
 
 
 .myButton, .myButton:visited  {
-	background-color: #94D4A0;
-	color: black;
+
 	text-decoration: none;
 	text-align: center;
+
+	color: white;
+	border: 2px solid rgb(233,173,63);
+	background-color: rgba(233,173,63,0.25);
+
 	-webkit-transition: background-color 0.5s;
 	transition: background-color 0.5s;
 
@@ -241,18 +233,6 @@ a:hover {
 	padding:0.5rem;
 	margin: 0.5rem;
 }
-
-
-/* make all bottons gray after hovering  */
-.myButton:hover, .myButton:active, .myButton:focus {
-	background-color: gray;
-	text-decoration: none;
-	color: white;
-}
-
-
-/* the content section, create a bg box in light grey, 
-make the box 1000 x 620. make a space of 1 em in all 4 side outside the box. */  /*  */  /*  */
 
 
 
@@ -265,7 +245,7 @@ h2 {
 }
 
 
-/*  the black bar bg for the news h2 */
+/*  the black bar bg for the service h2 */
 h2.bar_header{
 	font-family: 'Noto-Sans', sans-serif;
 	font-weight: 100;
@@ -411,8 +391,8 @@ h2#home_h2 {
 	padding-right: 1rem;
 }
 
-/*-------------------------  news page  -------------------------*/
-section.news_row1 {
+/*-------------------------  service page  -------------------------*/
+section.service_row1 {
 	background-color: rgba(255,255,255,0.1);
 	margin: 1rem auto;
 	margin-bottom: 0;
@@ -424,7 +404,7 @@ section.news_row1 {
 
 
 /* line-height:line-height: for the 3 article titles (white bold and large) */
-h2.news_article_title {
+h2.service_article_title {
 
 	font-weight: 100;
 	font-size: 1rem; 
@@ -439,7 +419,7 @@ h2.news_article_title {
 }
 
 
-section.news_article_block{
+section.service_article_block{
 	text-align: left;   /* align text of title, paragraph, and 3 links to the left side egde */
 	height:auto;
 	line-height:1.4;
@@ -454,7 +434,7 @@ section.news_article_block{
 
 
 /* h3 for the small title under each articles (tornament, Tour confident, Tiger Tracker)  */ /*  */
-h3.news_article_title {
+h3.service_article_title {
 	font-family: 'Noto-Sans', sans-serif;
 	font-weight: 100;
 	padding: 0.5rem 1em;
@@ -462,11 +442,11 @@ h3.news_article_title {
 	font-size: 1rem;
 }
 
-p.newscontent {
+p.servicecontent {
 	padding: 0.5rem;
 }
 
-section.news_row2 {
+section.service_row2 {
 	background-color: rgba(255,255,255,0.1);
 	margin: 1rem 1rem;
 	margin-bottom: 6.5rem;
@@ -477,14 +457,9 @@ section.news_row2 {
 	padding: 1rem;
 }
 
-.news_divider {
-	position: relative;
-	top: 5%;
-	bottom: 5%;
-	border-right: 1px solid #C5C5C5;
-}
 
-h3.news_h3 {
+
+h3.service_h3 {
 	font-family: 'Noto-Sans', sans-serif;
 	font-weight: 500;
 	font-size: 1rem; 
@@ -493,16 +468,16 @@ h3.news_h3 {
 }
 
 
-img.news_image{
+img.service_image{
 	max-width: 94%;
 	margin-left:3%;
 }
 
 
-/*-------------------------  golf course pages -------------------------*/
+/*-------------------------  contact pages -------------------------*/
 
 
-section.golfCourse_row1{
+section.contact_row1{
 /*	background-image: url("../images/home_image.jpg");*/
 	margin: 1rem auto;
 	margin-bottom: 0rem;
@@ -511,7 +486,7 @@ section.golfCourse_row1{
 	background-color: rgba(240, 240 ,240 ,0.1);
 }
 
-section.golfCourse_image {
+section.contact_image {
 
 	background-color: rgba(255,255,255,0.1);
 	width: auto;
@@ -523,7 +498,7 @@ section.golfCourse_image {
 }
 
 
-section.golfCourse_text_block1 {
+section.contact_text_block1 {
 
 	/*width:100%;*/
 	max-width: 100%;
@@ -537,11 +512,11 @@ section.golfCourse_text_block1 {
 	box-sizing: border-box;
 }
 
-h3.golfCourse_h2 {
+h3.contact_h2 {
 	padding-left: 0;
 }
 
-.golfCourse_buttons{
+.contact_buttons{
 	margin: 0rem auto;
 	margin-bottom: 0;
 	background-color: rgba(240, 240 ,240 ,0.2);
@@ -549,15 +524,9 @@ h3.golfCourse_h2 {
 }
 
 
-.golfCourse_divider {
-	position: relative;
-	top: 10%;
-	bottom: 10%;
-	border-right: 1px solid #C5C5C5;
-}
 
 
-section.golfCourse_row2{
+section.contact_row2{
 /*	background-image: url("../images/home_image.jpg");*/
 	margin: 0.5rem auto;
 	margin-bottom: 0rem;
@@ -566,7 +535,7 @@ section.golfCourse_row2{
 	background-color: rgba(240, 240 ,240 ,0.1);
 }
 
-section.golfCourse_text_block2{
+section.contact_text_block2{
 
 	width:100%;
 	max-width: 100%;
@@ -597,7 +566,7 @@ section.golfCourse_text_block2{
 }
 
 
-section.golfCourse_gallery{
+section.contact_gallery{
 	width:80%;
 	margin: 0.5rem auto;
 	margin-bottom: 6.5rem;
@@ -607,7 +576,7 @@ section.golfCourse_gallery{
 	background-color: rgba(240, 240 ,240 ,0.2);
 }
 
-img.golfCourse_gallery_image{
+img.contact_gallery_image{
 	width:300px;
 	height:150px;
 	line-height:1.4;
@@ -623,49 +592,40 @@ img.golfCourse_gallery_image{
 	text-align: center;
 }
 
-#golfButton1 {
+#contactButton1 {
 	padding: 0.5rem 2rem 0.7rem 2rem;
 	margin: 0 1rem 0 0;
 	text-decoration: none;
 }
 
-#golfButton1:hover {
-	background-color: #C5C5C5;
-	color: black;
-}
 
-#golfButton2 {
+
+#contactButton2 {
 	padding: 0.5rem 2rem 0.7rem 2rem;
 	margin: 0 1rem 0 1rem;
 	text-decoration: none;
 }
 
-#golfButton2:hover {
-	background-color: #C5C5C5;
-	color: black;
-}
 
-#golfButton3 {
+
+#contactButton3 {
 	padding: 0.5rem 1rem 0.7rem 1rem;
 	margin: 0 1rem 0 0;
 	text-decoration: none;
 }
 
-#golfButton3:hover {
-	background-color: #C5C5C5;
-	color: black;
-}
 
-#golfContent{
+
+#contactContent{
 	padding-right: 1rem;
 }
 
-#golfContent2{
+#contactContent2{
 	padding-left: 1rem;
 	padding-right: 1rem;
 }
 
-.golfContent3{
+.contactContent3{
 	padding-left: 1rem;
 	padding-right: 1rem;
 }
@@ -755,7 +715,7 @@ width:10rem;
 
 }
 
-/*Newsletters */
+/*serviceletters */
 input.checkbox{
 margin-right: 1px;
 
@@ -781,6 +741,8 @@ margin-right: 1px;
 	margin: 0 0 3rem 0;
 	width: 80%;
 	text-align: left;
+	color: rgb(230,230,230);
+	background-color: rgb(230,230,230,0.2);
 }
 
 #loginRegisterContent {
@@ -795,8 +757,9 @@ margin-right: 1px;
 
 }
 
+
 #cancelR {
-	background-color: #94D4A0;
+	background-color: rgb(233,173,63);
 	float: right;
 	text-decoration: none;
 	color: black;
@@ -807,7 +770,7 @@ margin-right: 1px;
 }
 
 #nextR {
-	background-color: #94D4A0;
+	background-color: rgb(233,173,63);
 	float: right;
 	text-decoration: none;
 	color: black;
@@ -911,45 +874,7 @@ input.CSC{
 	width: 80%;
 }
 
-/* personal information content box styling */
-.billingContent {
-	display: inline-block;
-	padding: 1rem 1rem 1rem 2rem;
-	margin: 0 1rem 2rem 1rem;
-	text-align: left;
-}
 
-#finishP {
-	background-color: #94D4A0;
-	float: right;
-	text-decoration: none;
-	color: black;
-	padding: 0.3rem;
-	margin: 0 2rem 1rem 0;
-	-webkit-transition: background-color 0.5s;
-	transition: background-color 0.5s;
-}
-#editP {
-	background-color: #94D4A0;
-	float: right;
-	text-decoration: none;
-	color: black;
-	padding: 0.3rem;
-	margin: 0 0.8rem 1rem 0;
-	-webkit-transition: background-color 0.5s;
-	transition: background-color 0.5s;
-}
-
-#cancelP {
-	background-color: #94D4A0;
-	float: right;
-	text-decoration: none;
-	color: black;
-	padding: 0.3rem;
-	margin: 0 0.8rem 1rem 0;
-	-webkit-transition: background-color 0.5s;
-	transition: background-color 0.5s;
-}
 
 
 /* ======== Book a tee time 1 ======== */
@@ -1010,43 +935,6 @@ input.CSC{
 	width: 100%;
 }
 
-#infoIcon {
-	background-color: #94D4A0;
-	color: black;
-	margin: 0;
-	border-radius: 50%;
-	padding: 0.2rem 0.4rem;
-	text-decoration: none;
-	font-weight: 600;
-	font-size: 0.5rem;
-	width: 3px;
-	height: 3px;
-}
-
-#infoIcon:hover {
-	background-color: gray;
-	color: white;
-
-}
-
-#infoIcon1 {
-	background-color: #94D4A0;
-	color: black;
-	margin: 0;
-	border-radius: 50%;
-	padding: 0.2rem 0.4rem;
-	text-decoration: none;
-	font-weight: 600;
-	font-size: 0.5rem;
-	width: 3px;
-	height: 3px;
-}
-
-#infoIcon1:hover {
-	background-color: gray;
-	color: white;
-
-}
 
 /* fix positioning of book as guest article at 853px */
 
@@ -1055,7 +943,7 @@ input.CSC{
 }
 
 
-#register {
+/*#register {
 	background-color: #94D4A0;
 	text-decoration: none;
 	color: black;
@@ -1063,14 +951,14 @@ input.CSC{
 	border-radius: 5px;
 	box-shadow: 0px 0px 5px rgba(0,0,0,0.15);
 	margin: 1rem 0.5rem 0 5rem;
-}
+}*/
 
 #loginButton {
 	padding: 0.3rem 1rem;
 }
 
 #bookButton, #bookButton:visited  {
-	background-color: #94D4A0;
+	background-color:rgb(233,173,63);
 	color: black;
 	text-decoration: none;
 	text-align: center;
@@ -1087,7 +975,7 @@ input.CSC{
 /* make book bottons gray after hovering  */
 #bookButton:hover, #bookButton:active, #bookButton:focus {
 	background-color: rgb(233,173,63);
-	color: white;
+	color: black;
 }
 
 #phone{
@@ -1114,7 +1002,7 @@ input.CSC{
 }
 
 
-#golfCourse {
+#contact {
 	width: 100%;
 }
 
@@ -1122,6 +1010,7 @@ input.CSC{
 
 .step1{
 	margin-bottom: 7.5rem;
+	background-color: rgba(230,230,230, 0.2);
 }
 
 #selectlabel {
@@ -1159,6 +1048,7 @@ input.CSC{
 
 .step2 {
 	margin-bottom: 6.5rem;
+	background-color: rgba(230,230,230, 0.2);
 }
 
 #paymentlabel {
@@ -1173,7 +1063,6 @@ input.CSC{
 }
 
 #selectlocation {
-	background-color: #ABABAB;
 	padding: 0.3rem;
 }
 
@@ -1243,9 +1132,12 @@ input.CSC{
 
 .step3{
 	margin-bottom: 7.5rem;
+	background-color: rgba(230,230,230, 0.2);
 }
 
 .content {
+	background-color: rgb(230,230,230,0.2);
+
 	display: inline-block;
 	padding: 1rem 1rem 1rem 4.5rem;
 	margin: 0 0 3rem 0;
@@ -1268,31 +1160,31 @@ input.CSC{
 
 }
 #active {
-	background: rgb(233,173,63);
+	background: rgba(233,173,63,0.9);
 	color: white;
 }
 #active2 {
-	background: white;
-	color: black;
+	background: rgba(233,173,63,0.9);
+	color: white;
 }
 
 #inActive {
-	background-color: #AAA;
+	background-color: rgba(233,173,63,0.5);
 	color: white;
 }
 
 #inActive2 {
-	background-color: #AAA;
+	background-color:rgba(233,173,63,0.5);
 	color: white;
 }
 
 #complete:hover {
-	background-color: #696969;
+	background-color:rgba(233,173,63,0.5);
 	color: white;
 }
 
 .button {
-	background-color: #498A47;
+	background-color: rgba(233,173,63,0.5);
 	text-decoration: none;
 	color: black;
 	padding: 0.3rem;
@@ -1308,6 +1200,15 @@ input.CSC{
 	text-align: left;
 	text-decoration: none;
 	padding: 0 0rem;
+}
+
+#edit {
+	padding: 0.3rem 0.3rem;
+	margin-top: 2rem;
+	margin-bottom: 0;
+	-webkit-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+	float: left;
 }
 
 #cancel {
@@ -1380,19 +1281,15 @@ form {
 }
 
 #finish:hover {
-	background-color: green;
+	background-color: rgba(233,173,63,0.5);
 }
 
-#edit {
-	padding: 0.3rem 2rem;
-	margin-top: 2rem;
-	margin-bottom: 0;
-	-webkit-transition: background-color 0.5s;
-	transition: background-color 0.5s;
+#edit{
+	background-color: rgba(233,173,63,0.5);
 }
 
 #edit:hover {
-	background-color: green;
+	background-color: rgba(233,173,63,0.5);
 }
 
 #cancel { 
@@ -1400,7 +1297,7 @@ form {
 }
 
 #cancel:hover {
-	background-color: green;
+	background-color: rgba(233,173,63,0.5);
 }
 
 #next {
@@ -1408,44 +1305,10 @@ form {
 }
 
 #next:hover {
-	background-color: green;
+	background-color: rgba(233,173,63,0.5);
 }
 
 /* =========================== footer  ============================== */
-
-footer{
-
-	font-size: 0.7rem;
-	line-height: 1rem; 
-	color: #D3D3D3;
-	background-color: rgba(0, 0, 0, 0.6);
-	text-align: left;
-
-	padding: 0.8rem;
-	margin: 0;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-
-/*	min-width: 700px;*/
-
-}
-
-.logo_image{
-	width: 100px;
-	height: auto;
-	margin-left: 10%;
-
-}
-
-.address{
-	margin-left: 10%;
-}
-
-#footerlogo {
-	border: none;
-}
-
 
 
 /* media queries */
@@ -1455,7 +1318,7 @@ footer{
 
 /* hide "more" link when screen is  >= 1200px */
 @media (max-width: 1500px){
-	.golfCourse_p2{
+	.contact_p2{
 		display: none;
 }
 
@@ -1475,13 +1338,13 @@ footer{
 			display: inline-block;
 		}
 
-		.golfCourse_p2{
+		.contact_p2{
 		display: none;
 	}
 
 
 @media (max-width: 900px){
-		.news_divider{
+		.service_divider{
 			border-right: none;
 			border-bottom: 1px solid gray;
 		}
@@ -1503,31 +1366,31 @@ footer{
 			margin-bottom: 7rem;
 		}
 
-		section.news_row1{
+		section.service_row1{
 			width: 100%;
 		}
 
-		section.news_row2{
+		section.service_row2{
 			width: 100%;
 			margin: 1rem 0 7.5rem 0;
 		}
 
 
-		section.golfCourse_row1{
+		section.contact_row1{
 			width: 100%;
 		}
 
-		section.golfCourse_row2{
+		section.contact_row2{
 			width:100%;
 		}
 
-		section.golfCourse_buttons{
+		section.contact_buttons{
 			width: 100%;
 			margin: 0;
 
 		}
 
-		section.golfCourse_gallery {
+		section.contact_gallery {
 			width: 100%;
 			padding: 0;
 		}
@@ -1535,7 +1398,7 @@ footer{
 
 @media (max-width: 500px){
 
-		.golfCourse_divider{
+		.contact_divider{
 			border-right: none;
 			border-bottom: 1px solid gray;
 		}
@@ -1632,10 +1495,15 @@ footer{
 		margin-top: 2rem;
 	}
 	#edit {
-		padding: 0.3rem 2rem;
+		padding: 0.3rem 0.5rem;
 		margin-top: 3rem;
-		margin-bottom: 0;
 	}
+
+	a#editR.myButton {
+		margin: 0.5rem;
+		padding: 0;
+	}
+
 	a#cancelR.myButton {
 		margin: 0.5rem;
 		padding: 0;
@@ -1649,7 +1517,7 @@ footer{
 
 @media (max-width: 1000px){
 
-	img.golfCourse_gallery_image{
+	img.contact_gallery_image{
 			display: none;
 		}
 	.home_divider{
